@@ -21,9 +21,9 @@ public class RollAnimation : MonoBehaviour
         var currentOffset = esteiraMaterial.material.GetTextureOffset("_MainTex");
         float xOffset = Mathf.Abs(currentOffset.x);
 
-        esteiraMaterial.material.SetTextureOffset("_MainTex", new Vector2(
-                                                                         Mathf.Lerp(currentOffset.x, (xOffset + Mathf.Abs(offset)) * direction, 0.2f)
-                                                                         , 0
-                                                                         ));
+        esteiraMaterial.material.SetTextureOffset("_MainTex", Vector2.Lerp(currentOffset,
+                                                                            new Vector2((xOffset + offset) * direction, 0),
+                                                                            0.2f
+                                                                            ));
     }
 }

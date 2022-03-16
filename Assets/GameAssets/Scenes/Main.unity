@@ -1293,6 +1293,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 610489999}
+  - component: {fileID: 610490000}
   m_Layer: 0
   m_Name: Rolamentos
   m_TagString: Untagged
@@ -1323,6 +1324,29 @@ Transform:
   m_Father: {fileID: 1621886421}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &610490000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610489998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e3f0590d8112e145992705a7871d83e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roll_Anim:
+  - {fileID: 5251031037130963957}
+  - {fileID: 1347835825}
+  - {fileID: 1183690033}
+  - {fileID: 1202607646}
+  - {fileID: 1271533472}
+  - {fileID: 1126940298}
+  - {fileID: 261115429}
+  - {fileID: 288717120}
+  esteiraMaterial: {fileID: 601458138683062076}
+  offset: 0.3
 --- !u!1 &612989741
 GameObject:
   m_ObjectHideFlags: 0
@@ -2164,6 +2188,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 943988762}
+  - component: {fileID: 943988763}
   m_Layer: 0
   m_Name: Waypoints
   m_TagString: Waypoints
@@ -2193,6 +2218,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &943988763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943988760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc5c03cf7966d3e4e891e70e8c44e099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 2090755242}
+  - {fileID: 1513243774}
+  - {fileID: 1525454242}
+  - {fileID: 35262004}
+  - {fileID: 466074036}
+  - {fileID: 1908292630}
+  - {fileID: 1954911589}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3673,6 +3718,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1496752138}
+  - component: {fileID: 1496752145}
+  - component: {fileID: 1496752144}
+  - component: {fileID: 1496752143}
+  - component: {fileID: 1496752142}
+  - component: {fileID: 1496752141}
+  - component: {fileID: 1496752140}
+  - component: {fileID: 1496752139}
   m_Layer: 0
   m_Name: _Managers
   m_TagString: GameController
@@ -3695,6 +3747,119 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1496752139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496752137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de3d1d160ce3c174ab0f611ec411c686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeMatch: 120
+  timeToNextTask: 20
+--- !u!114 &1496752140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496752137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e566488f16878647a7382664dfb5247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlPool:
+  - name: Frasco_01
+    amount: 10
+    p_object: {fileID: 3368376954898853696, guid: b29f3eb832a759d4b91cfa1c8eff58d7, type: 3}
+  - name: Frasco_02
+    amount: 10
+    p_object: {fileID: 8336751224456552218, guid: a00fc0f9200a11b4b8076b43ce05bf00, type: 3}
+  - name: Frasco_03
+    amount: 10
+    p_object: {fileID: 1582445013501791674, guid: ea2c7367f5c01984ba625e837c7e7305, type: 3}
+  - name: Tampa
+    amount: 10
+    p_object: {fileID: 903697926934523841, guid: 2285c918ade15aa4dbad07a42ddfe916, type: 3}
+--- !u!114 &1496752141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496752137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24c802c98bc1aa443af44b7aff57fb7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1496752142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496752137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bae018df3999f84dabda44e7138b53f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 1513243774}
+  containers:
+  - {fileID: 3368376954898853696, guid: b29f3eb832a759d4b91cfa1c8eff58d7, type: 3}
+  - {fileID: 8336751224456552218, guid: a00fc0f9200a11b4b8076b43ce05bf00, type: 3}
+  - {fileID: 1582445013501791674, guid: ea2c7367f5c01984ba625e837c7e7305, type: 3}
+--- !u!114 &1496752143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496752137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3cb1d72069b2f408fa104b3f8c173c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colors:
+  - {fileID: 2100000, guid: bc82bb6369edc31419345139d748c7f3, type: 2}
+  - {fileID: 2100000, guid: bec456b86eaaa3043a5a7dc62e06da3d, type: 2}
+  - {fileID: 2100000, guid: 27db800cdc3b3054bb7e272cf5891e07, type: 2}
+  - {fileID: 2100000, guid: 12863d6406ef5144eb70db800b61e67f, type: 2}
+  - {fileID: 2100000, guid: 235ec25d92afa6745aa1c600c6002cae, type: 2}
+  - {fileID: 2100000, guid: 2dcd7ee40a9965445a0e254530ad737d, type: 2}
+  - {fileID: 2100000, guid: ba5ff1226a688d2449e5652cf2c5b065, type: 2}
+  rolha: {fileID: 903697926934523841, guid: 2285c918ade15aa4dbad07a42ddfe916, type: 3}
+--- !u!114 &1496752144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496752137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59eaaae2acacb774b98070455c81c87e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1496752145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496752137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6e66c0dd5b57a94d8d6fec6ed88b1f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1513243773
 GameObject:
   m_ObjectHideFlags: 0
@@ -4736,6 +4901,7 @@ GameObject:
   - component: {fileID: 2067411372}
   - component: {fileID: 2067411371}
   - component: {fileID: 2067411370}
+  - component: {fileID: 2067411374}
   m_Layer: 5
   m_Name: TaskCanvas
   m_TagString: Untagged
@@ -4825,6 +4991,43 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &2067411374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2067411369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8990bd87632095f49abba4e18e7ecf27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 510568287}
+  taskTimer: {fileID: 888368919}
+  fillImage: {fileID: 1057003484}
+  sucessImage: {fileID: 567666885}
+  failedImage: {fileID: 1793326419}
+  task: {fileID: 510568285}
+  i_tasks:
+  - {fileID: 21300000, guid: 24669306d92b05f40abc21129a894343, type: 3}
+  - {fileID: 21300000, guid: e59456e22a089954b9423d152411b2da, type: 3}
+  - {fileID: 21300000, guid: 7003a1ace39593c498ef25d2dc667fc3, type: 3}
+  - {fileID: 21300000, guid: 88d0238c7d113354ea78f34a50830c16, type: 3}
+  - {fileID: 21300000, guid: 4ac4ea41ebc87e046b9f0dcf4e088dfe, type: 3}
+  - {fileID: 21300000, guid: d823d623b2a8a8a4fa15c04b4da1ac17, type: 3}
+  - {fileID: 21300000, guid: b7b38c2e6708ce74385c71f4c8987c71, type: 3}
+  - {fileID: 21300000, guid: af193cfe3716db446895b204a5c5934f, type: 3}
+  - {fileID: 21300000, guid: 1436647ff52d5364f8cde78c7950f4c8, type: 3}
+  - {fileID: 21300000, guid: e01489be1a790ba428804b44d1458c1d, type: 3}
+  - {fileID: 21300000, guid: 4e81f1df3030c9141aa41c257f2c635b, type: 3}
+  - {fileID: 21300000, guid: d80e5b4bb3fa68545b9e00473ce24d9e, type: 3}
+  - {fileID: 21300000, guid: 6bb429ae8283beb4a864ff3b838c98d4, type: 3}
+  - {fileID: 21300000, guid: 318761160ff307a428966df7469bef30, type: 3}
+  - {fileID: 21300000, guid: 81ddcb5dc62bd934498c9f02d9cfe81e, type: 3}
+  - {fileID: 21300000, guid: 6c82be7495b304143aa21e88da9f1dba, type: 3}
+  - {fileID: 21300000, guid: 841423c92ccbb85458a5a35a67f9f31b, type: 3}
+  - {fileID: 21300000, guid: 85ad67a3e7cd58c49b3c987c2705f4f2, type: 3}
 --- !u!1 &2077019883
 GameObject:
   m_ObjectHideFlags: 0
@@ -5244,6 +5447,7 @@ GameObject:
   - component: {fileID: 1305851669102507555}
   - component: {fileID: 3889885657096798955}
   - component: {fileID: 3889885657096798956}
+  - component: {fileID: 3889885657096798957}
   m_Layer: 0
   m_Name: botao_engradado
   m_TagString: Untagged
@@ -5414,6 +5618,7 @@ GameObject:
   - component: {fileID: 1091393321100365309}
   - component: {fileID: 2936803497111927097}
   - component: {fileID: 2936803497111927098}
+  - component: {fileID: 2936803497111927099}
   m_Layer: 0
   m_Name: botao_frasco01
   m_TagString: Untagged
@@ -5498,6 +5703,7 @@ GameObject:
   - component: {fileID: 253624550833391721}
   - component: {fileID: 2621650676747271333}
   - component: {fileID: 2621650676747271334}
+  - component: {fileID: 2621650676747271335}
   m_Layer: 0
   m_Name: botao_azul
   m_TagString: Untagged
@@ -5736,6 +5942,45 @@ CapsuleCollider:
   m_Height: 0.23702693
   m_Direction: 1
   m_Center: {x: 0.0000000037252903, y: 0.0015420616, z: -0.0024678754}
+--- !u!114 &2621650676747271335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1767084920193264060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd2aafacdbf9424888fb141953a8422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1496752144}
+        m_TargetAssemblyTypeName: Main.ClickEvents, Assembly-CSharp
+        m_MethodName: PaintBlue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1406190786}
+        m_TargetAssemblyTypeName: BombAnimation, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &2642640672784729348
 Transform:
   m_ObjectHideFlags: 0
@@ -5764,6 +6009,7 @@ GameObject:
   - component: {fileID: 4482709022574974737}
   - component: {fileID: 4482709022574974739}
   - component: {fileID: 4482709022574974740}
+  - component: {fileID: 4482709022574974741}
   m_Layer: 0
   m_Name: botao_esq
   m_TagString: Untagged
@@ -5839,6 +6085,57 @@ CapsuleCollider:
   m_Height: 0.23702693
   m_Direction: 1
   m_Center: {x: -0.00000024586916, y: 0.0034715235, z: -0.0036328742}
+--- !u!114 &2936803497111927099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451729188401998888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd2aafacdbf9424888fb141953a8422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1554265654}
+        m_TargetAssemblyTypeName: BombAnimation, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1496752142}
+        m_TargetAssemblyTypeName: Main.SpawnerManager, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1496752142}
+        m_TargetAssemblyTypeName: Main.SpawnerManager, Assembly-CSharp
+        m_MethodName: Spawned
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &3084876324034065799
 GameObject:
   m_ObjectHideFlags: 0
@@ -5852,6 +6149,7 @@ GameObject:
   - component: {fileID: 3589178533567501394}
   - component: {fileID: 3589178533567501396}
   - component: {fileID: 3589178533567501397}
+  - component: {fileID: 3589178533567501398}
   m_Layer: 0
   m_Name: botao_dir
   m_TagString: Untagged
@@ -5965,6 +6263,7 @@ GameObject:
   - component: {fileID: 3812199693606895211}
   - component: {fileID: 3812199693606895213}
   - component: {fileID: 3812199693606895214}
+  - component: {fileID: 3812199693606895215}
   m_Layer: 0
   m_Name: botao_rolha
   m_TagString: Untagged
@@ -6069,6 +6368,57 @@ CapsuleCollider:
   m_Height: 0.23702693
   m_Direction: 1
   m_Center: {x: 0.0003607124, y: 0.000000007450581, z: -0.008842442}
+--- !u!114 &3589178533567501398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3084876324034065799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd2aafacdbf9424888fb141953a8422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1496752144}
+        m_TargetAssemblyTypeName: Main.ClickEvents, Assembly-CSharp
+        m_MethodName: MoveRight
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 610490000}
+        m_TargetAssemblyTypeName: RollAnimation, Assembly-CSharp
+        m_MethodName: Roll
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Left
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 610490000}
+        m_TargetAssemblyTypeName: RollAnimation, Assembly-CSharp
+        m_MethodName: Roll
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: -1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!23 &3718843761750975519
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6187,6 +6537,45 @@ CapsuleCollider:
   m_Height: 0.23702693
   m_Direction: 1
   m_Center: {x: 0.0004278794, y: -0.0014064312, z: -0.002214931}
+--- !u!114 &3812199693606895215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3451827816577179582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd2aafacdbf9424888fb141953a8422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1496752144}
+        m_TargetAssemblyTypeName: Main.ClickEvents, Assembly-CSharp
+        m_MethodName: PutTampa
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1923699670}
+        m_TargetAssemblyTypeName: BombAnimation, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!33 &3889885657096798953
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6229,6 +6618,45 @@ CapsuleCollider:
   m_Height: 0.23702694
   m_Direction: 1
   m_Center: {x: -0.0015581697, y: 0.0024286956, z: -0.0045901183}
+--- !u!114 &3889885657096798957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657434683761170422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd2aafacdbf9424888fb141953a8422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3914775384695093334
 GameObject:
   m_ObjectHideFlags: 0
@@ -6242,6 +6670,7 @@ GameObject:
   - component: {fileID: 3266498450117499267}
   - component: {fileID: 4404454276135510766}
   - component: {fileID: 4404454276135510767}
+  - component: {fileID: 4404454276135510768}
   m_Layer: 0
   m_Name: botao_vermelho
   m_TagString: Untagged
@@ -6332,6 +6761,45 @@ CapsuleCollider:
   m_Height: 0.23702693
   m_Direction: 1
   m_Center: {x: 0, y: 0.0015420541, z: -0.0024678744}
+--- !u!114 &4404454276135510768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3914775384695093334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd2aafacdbf9424888fb141953a8422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1496752144}
+        m_TargetAssemblyTypeName: Main.ClickEvents, Assembly-CSharp
+        m_MethodName: PaintRed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2014633703}
+        m_TargetAssemblyTypeName: BombAnimation, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!23 &4482709022574974737
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6408,6 +6876,57 @@ CapsuleCollider:
   m_Height: 0.23702693
   m_Direction: 1
   m_Center: {x: -0.00069300085, y: 0.000000007450581, z: -0.008842442}
+--- !u!114 &4482709022574974741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2681106788352964292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd2aafacdbf9424888fb141953a8422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1496752144}
+        m_TargetAssemblyTypeName: Main.ClickEvents, Assembly-CSharp
+        m_MethodName: MoveLeft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 610490000}
+        m_TargetAssemblyTypeName: RollAnimation, Assembly-CSharp
+        m_MethodName: Roll
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Right
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 610490000}
+        m_TargetAssemblyTypeName: RollAnimation, Assembly-CSharp
+        m_MethodName: Roll
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!33 &4806785529938364784
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6580,6 +7099,7 @@ GameObject:
   - component: {fileID: 6150680811619832106}
   - component: {fileID: 8268447105869784546}
   - component: {fileID: 8268447105869784547}
+  - component: {fileID: 8268447105869784548}
   m_Layer: 0
   m_Name: botao_frasco02
   m_TagString: Untagged
@@ -6746,6 +7266,7 @@ GameObject:
   - component: {fileID: 5076834517962646197}
   - component: {fileID: 7030256806790829697}
   - component: {fileID: 7030256806790829698}
+  - component: {fileID: 7030256806790829699}
   m_Layer: 0
   m_Name: botao_amarelo
   m_TagString: Untagged
@@ -6795,6 +7316,45 @@ CapsuleCollider:
   m_Height: 0.23702694
   m_Direction: 1
   m_Center: {x: 0, y: 0.0015420616, z: -0.0024678865}
+--- !u!114 &7030256806790829699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6734137535032017760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd2aafacdbf9424888fb141953a8422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1496752144}
+        m_TargetAssemblyTypeName: Main.ClickEvents, Assembly-CSharp
+        m_MethodName: PaintYellow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1323796346}
+        m_TargetAssemblyTypeName: BombAnimation, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!23 &7077805441315049867
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7262,6 +7822,57 @@ CapsuleCollider:
   m_Height: 0.23702693
   m_Direction: 1
   m_Center: {x: 0, y: 0.0033752471, z: -0.005407639}
+--- !u!114 &8268447105869784548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5646220823057854719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd2aafacdbf9424888fb141953a8422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1554265654}
+        m_TargetAssemblyTypeName: BombAnimation, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1496752142}
+        m_TargetAssemblyTypeName: Main.SpawnerManager, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1496752142}
+        m_TargetAssemblyTypeName: Main.SpawnerManager, Assembly-CSharp
+        m_MethodName: Spawned
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &8288707462839465077
 GameObject:
   m_ObjectHideFlags: 0
@@ -7293,6 +7904,7 @@ GameObject:
   - component: {fileID: 7544265762485065158}
   - component: {fileID: 8717193587345829547}
   - component: {fileID: 8717193587345829548}
+  - component: {fileID: 8717193587345829549}
   m_Layer: 0
   m_Name: botao_frasco03
   m_TagString: Untagged
@@ -7490,6 +8102,57 @@ CapsuleCollider:
   m_Height: 0.23702693
   m_Direction: 1
   m_Center: {x: -0.000000044703484, y: -0.000028308481, z: -0.0042603165}
+--- !u!114 &8717193587345829549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8336833394767819795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd2aafacdbf9424888fb141953a8422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1554265654}
+        m_TargetAssemblyTypeName: BombAnimation, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1496752142}
+        m_TargetAssemblyTypeName: Main.SpawnerManager, Assembly-CSharp
+        m_MethodName: Spawn
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1496752142}
+        m_TargetAssemblyTypeName: Main.SpawnerManager, Assembly-CSharp
+        m_MethodName: Spawned
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &8735178964429353054
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,10 +9,6 @@ public class TaskHUD : MonoBehaviour
 
     [SerializeField] private Image fillImage;
 
-    [SerializeField] private Color startColor;
-
-    [SerializeField] private Color endColor;
-
     [SerializeField] private Image sucessImage;
     [SerializeField] private Image failedImage;
 
@@ -148,7 +144,8 @@ public class TaskHUD : MonoBehaviour
     private void ShowTaskTimer()
     {
         this.taskTimer.value = mainTask.GetTimer();
-        fillImage.color = Color.Lerp(this.endColor, this.startColor, this.taskTimer.value);
+
+        this.fillImage.color = this.taskTimer.value > 0.5f ? Color.green : Color.red;
     }
 
     private void Sucess()
