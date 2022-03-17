@@ -4,6 +4,10 @@ public class GameManager : Singleton<GameManager>
 {
     public delegate void OnGame();
 
+    public static event OnGame _OnCompletedAllTasks;
+
+    public static event OnGame _OnDelivery;
+
     public static event OnGame _OnSucess;
     public static event OnGame _OnFailed;
 
@@ -21,6 +25,17 @@ public class GameManager : Singleton<GameManager>
     public void OnFailed()
     {
         _OnFailed?.Invoke();
+    }
+
+    public void OnDelivery()
+    {
+        _OnDelivery?.Invoke();
+    }
+
+    public void OnCompleted()
+    {
+        _OnCompletedAllTasks?.Invoke();
+        print("CompletedAllTasks");
     }
     #endregion
 }

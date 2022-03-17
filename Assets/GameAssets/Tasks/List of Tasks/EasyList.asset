@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e650721acf4ef3499c81f4b990a2995, type: 3}
+  m_Name: EasyList
+  m_EditorClassIdentifier: 
+  tasks:
+  - {fileID: 11400000, guid: e741063e88c06b240a8cddf1f543395f, type: 2}
+  - {fileID: 11400000, guid: a001fe295cbe9ec45a0d53f0ad621335, type: 2}
+  - {fileID: 11400000, guid: 0b3d3136ff6cd4343a097e63c283577b, type: 2}
+  - {fileID: 11400000, guid: a8b6fffe17463644eb24643f7249acf0, type: 2}
+  - {fileID: 11400000, guid: 8ee7499ece87ecb4cba408f55b906920, type: 2}
+  - {fileID: 11400000, guid: c7828523b23c8b840ae8cb91b5d71f42, type: 2}
+  - {fileID: 11400000, guid: b7ca83514f4774945bd65d9774949908, type: 2}
+  - {fileID: 11400000, guid: 6ab59439600d92b4b9f547ae5a013b57, type: 2}
+  - {fileID: 11400000, guid: 4943ace48a817a14f99eab3b6c254b39, type: 2}

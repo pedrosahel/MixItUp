@@ -2,10 +2,8 @@ namespace Main
 {
     using UnityEngine;
 
-    public class ClickEvents : MonoBehaviour
+    public class ClickEvents : Singleton<ClickEvents>
     {
-        public static ClickEvents Instace;
-
         public delegate void OnButton();
         public static event OnButton _MovingRight;
         public static event OnButton _MovingLeft;
@@ -14,14 +12,6 @@ namespace Main
         public static event OnButton _PaintRed;
         public static event OnButton _PaintYellow;
         public static event OnButton _PutTampa;
-
-
-
-        private void Awake() 
-        {
-            if(Instace == null) Instace = this;
-            else Destroy(this);
-        }
 
         public void MoveRight()
         {

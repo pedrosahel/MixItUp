@@ -22,20 +22,20 @@ public class TaskHUD : MonoBehaviour
 
     private int i_index;
 
-    private Task mainTask;
+    private _Task mainTask;
 
     private void OnEnable() 
     {
-        this.mainTask = FindObjectOfType<Task>();
+        this.mainTask = FindObjectOfType<_Task>();
 
-        TaskManager._Task += GetTask;    
+        _TaskManager._Task += GetTask;    
         GameManager._OnSucess += Sucess;
         GameManager._OnFailed += Failed;
     }
 
     private void OnDisable()
     {
-        TaskManager._Task -= GetTask; 
+        _TaskManager._Task -= GetTask; 
         GameManager._OnSucess -= Sucess;
         GameManager._OnFailed -= Failed;   
     }

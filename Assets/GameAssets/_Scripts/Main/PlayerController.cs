@@ -40,35 +40,38 @@ namespace Main
     #region Unity Functions.
     private void OnEnable() 
     {
-            this.waypoints = FindObjectOfType<Waypoint>().waypoints;
-            this.p_rb = GetComponent<Rigidbody>();
-            this.box = GetComponent<BoxCollider>();
-            this.mr = this.gameObject.transform.GetChild(1).GetComponent<MeshRenderer>();
-            this.rolhaPos = this.gameObject.transform.GetChild(0).GetComponent<Transform>();
-            Reset();
+        this.waypoints = FindObjectOfType<Waypoint>().waypoints;
+        this.p_rb = GetComponent<Rigidbody>();
+        this.box = GetComponent<BoxCollider>();
+        this.mr = this.gameObject.transform.GetChild(1).GetComponent<MeshRenderer>();
+        this.rolhaPos = this.gameObject.transform.GetChild(0).GetComponent<Transform>();
+        Reset();
 
+        if(ClickEvents.Instance == null) return;
 
-            ClickEvents._PaintBlue += Blue;
-            ClickEvents._PaintRed += Red;
-            ClickEvents._PaintYellow += Yellow;
-            ClickEvents._PutTampa += Tampa;
-            ClickEvents._MovingRight += Increase;
-            ClickEvents._MovingLeft += Decrease;
+        ClickEvents._PaintBlue += Blue;
+        ClickEvents._PaintRed += Red;
+        ClickEvents._PaintYellow += Yellow;
+        ClickEvents._PutTampa += Tampa;
+        ClickEvents._MovingRight += Increase;
+        ClickEvents._MovingLeft += Decrease;
     }
 
     private void OnDisable()
     {
-            ClickEvents._MovingRight -= Increase;
-            ClickEvents._MovingLeft -= Decrease;
-            ClickEvents._PaintBlue -= Blue;
-            ClickEvents._PaintRed -= Red;
-            ClickEvents._PaintYellow -= Yellow;
-            ClickEvents._PutTampa -= Tampa;
+        if(ClickEvents.Instance == null) return;
+
+        ClickEvents._MovingRight -= Increase;
+        ClickEvents._MovingLeft -= Decrease;
+        ClickEvents._PaintBlue -= Blue;
+        ClickEvents._PaintRed -= Red;
+        ClickEvents._PaintYellow -= Yellow;
+        ClickEvents._PutTampa -= Tampa;
     }
 
     private void Update()
     {
-            Movement();
+        Movement();
     }
 
     private void OnTriggerEnter(Collider other) 
@@ -249,8 +252,10 @@ namespace Main
     private void Delivery()
     {
             canMove = false;
+            if(GameManager.Instance != null) GameManager.Instance.OnDelivery();
             if(SpawnerManager.Instance != null) SpawnerManager.Instance.Spawned(false);
-            if(TaskManager.Instance != null) TaskManager.Instance.Check(myColor.ToString(), this.gameObject.tag, isClosed);
+            if(_TaskManager.Instance != null) _TaskManager.Instance.Check(myColor.ToString(), this.gameObject.tag, isClosed);
+            if(DeliveryBoxManager.Instance != null) DeliveryBoxManager.Instance.ShowContainer();
             this.gameObject.SetActive(false);
     }
     #endregion

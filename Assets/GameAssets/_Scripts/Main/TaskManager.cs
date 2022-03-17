@@ -21,6 +21,8 @@
         private int randomFrasco;
         private int colorsLenght;
         private int frascoLenght;
+
+        private bool deliveryBoxFull = false;
         
         private void Start() 
         {
@@ -33,9 +35,24 @@
             RandomTask();
         }
 
+        private void OnEnable()
+        {
+            if(DeliveryBoxManager.Instance == null) return;
+
+            DeliveryBoxManager._IsFull += Full;
+            DeliveryBoxManager._IsEmpty += Empty;
+        }
+
+        private void OnDisable()
+        {
+            if(DeliveryBoxManager.Instance == null) return;
+            
+            DeliveryBoxManager._IsFull -= Full;
+            DeliveryBoxManager._IsEmpty -= Empty;
+        }
+
         public void RandomTask()
         {
-
             switch(myState)
             {
                 case TaskState.OnlyPrimary:
@@ -59,25 +76,30 @@
 
         public void Check(string color, string frasco, bool tampa = true)
         {
-            _OnDelivery?.Invoke(color, frasco, tampa);
+            if(deliveryBoxFull) return;
 
-            if(tampa)
+            if(!deliveryBoxFull)
             {
-                if(color == myColor.ToString() && frasco == myFrasco.ToString())
-                {
-                    if(GameManager.Instance != null) GameManager.Instance.OnSucess();
-                }
-                else
-                {
-                    if(GameManager.Instance != null) GameManager.Instance.OnFailed(); 
-                }
-            }
-            else if (!tampa)
-            {
-                if(GameManager.Instance != null) GameManager.Instance.OnFailed();
-            }
+                _OnDelivery?.Invoke(color, frasco, tampa);
 
-            StartCoroutine(CallRandomTask());
+                if(tampa)
+                {
+                    if(color == myColor.ToString() && frasco == myFrasco.ToString())
+                    {
+                        if(GameManager.Instance != null) GameManager.Instance.OnSucess();
+                    }
+                    else
+                    {
+                        if(GameManager.Instance != null) GameManager.Instance.OnFailed(); 
+                    }
+                }
+                else if (!tampa)
+                {
+                    if(GameManager.Instance != null) GameManager.Instance.OnFailed();
+                }
+
+                StartCoroutine(CallRandomTask());
+            }
         }
 
         public IEnumerator CallRandomTask()
@@ -97,6 +119,16 @@
                     this.myState = TaskState.OnlySecundary;
                 break;
             }
+        }
+
+        public void Full()
+        {
+            this.deliveryBoxFull = true;
+        }
+
+        public void Empty()
+        {
+            this.deliveryBoxFull = false;
         }
     }
 }

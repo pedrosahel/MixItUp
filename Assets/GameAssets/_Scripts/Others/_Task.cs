@@ -1,8 +1,8 @@
-using UnityEngine;
 using System.Collections;
 using Main;
+using UnityEngine;
 
-public class Task : MonoBehaviour
+public class _Task : MonoBehaviour
 {
     [SerializeField] private float timeMatch;
     [SerializeField] protected float timeToNextTask;
@@ -44,9 +44,9 @@ public class Task : MonoBehaviour
 
         if(this.timeToNextTask <= 0)
         {
-            if(TaskManager.Instance != null)
+            if(_TaskManager.Instance != null)
             {
-                TaskManager.Instance.RandomTask();
+                _TaskManager.Instance.NextTask();
                 this.timeToNextTask = this.timerHolder;
             }
         }
@@ -55,22 +55,6 @@ public class Task : MonoBehaviour
     private void MatchTimer()
     {
         this.timeMatch -= Time.fixedDeltaTime;
-
-        if(this.timeMatch <= this.timeMatchHolder / 2)
-        {
-            if(TaskManager.Instance != null)
-            {
-                TaskManager.Instance.ActivedSecundary("Half");
-            }
-        }
-
-        if(this.timeMatch <= this.timeMatchHolder / 4)
-        {
-            if(TaskManager.Instance != null)
-            {
-                TaskManager.Instance.ActivedSecundary("Quarter");
-            }
-        }
 
         if(this.timeMatch <= 0)
         {
