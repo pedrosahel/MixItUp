@@ -71,6 +71,11 @@ public class _TaskManager : Singleton<_TaskManager>
         }
     }
 
+    public void Descarte(string color, string frasco)
+    {
+        if(ScoreManager.Instance != null) ScoreManager.Instance.Score(color, false, false);
+    }
+
     public void Check(string color, string frasco, bool tampa)
     {
          if(deliveryBoxFull) return;
@@ -82,15 +87,23 @@ public class _TaskManager : Singleton<_TaskManager>
                     if(color == tasks[currentTask].myColor.ToString() && frasco == tasks[currentTask].myFrasco.ToString())
                     {
                         if(GameManager.Instance != null) GameManager.Instance.OnSucess();
+                        if(ScoreManager.Instance != null) ScoreManager.Instance.Score(color, true, true);
                     }
-                    else
+                    else if(color == tasks[currentTask].myColor.ToString() && frasco != tasks[currentTask].myFrasco.ToString())
                     {
                         if(GameManager.Instance != null) GameManager.Instance.OnFailed(); 
+                        if(ScoreManager.Instance != null) ScoreManager.Instance.Score(color, true, false);
+                    }
+                    else if(color != tasks[currentTask].myColor.ToString() && frasco == tasks[currentTask].myFrasco.ToString())
+                    {
+                        if(GameManager.Instance != null) GameManager.Instance.OnFailed(); 
+                        if(ScoreManager.Instance != null) ScoreManager.Instance.Score(color, false, true);
                     }
                 }
                 else if (!tampa)
                 {
                     if(GameManager.Instance != null) GameManager.Instance.OnFailed();
+                    if(ScoreManager.Instance != null) ScoreManager.Instance.Score(color, false, false);
                 }
 
                 StartCoroutine(CallNextTask());

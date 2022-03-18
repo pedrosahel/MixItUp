@@ -247,6 +247,7 @@ namespace Main
             canMove = false;
             this.gameObject.SetActive(false);
             if(SpawnerManager.Instance != null) SpawnerManager.Instance.Spawned(false);
+            if(_TaskManager.Instance != null) _TaskManager.Instance.Descarte(myColor.ToString(), this.gameObject.tag);
     }
 
     private void Delivery()
