@@ -63,7 +63,17 @@ public class _TaskManager : Singleton<_TaskManager>
     public void NextTask()
     {
         if(this.tasks.Count - 1 == 0 && GameManager.Instance != null) GameManager.Instance.OnCompleted();
-        
+        else
+        {
+            tasks.Remove(tasks[this.currentTask]);
+            Task();
+        }
+    }
+
+    public void TaskFailure()
+    {
+        if(GameManager.Instance != null) GameManager.Instance.OnFailed();
+        if(this.tasks.Count - 1 == 0 && GameManager.Instance != null) GameManager.Instance.OnCompleted();
         else
         {
             tasks.Remove(tasks[this.currentTask]);

@@ -44,10 +44,16 @@ public class ScoreHUD : MonoBehaviour
    {
        this.scoreToAddText.gameObject.SetActive(true);
 
-       if(score > 0) this.scoreToAddText.color = Color.green;
-       else if(score < 0) this.scoreToAddText.color = Color.red;
-
-       this.scoreToAddText.text = "+ $" + score;
+       if(score > 0)
+       {
+            this.scoreToAddText.color = Color.green;
+            this.scoreToAddText.text = "+$" + score;
+       }
+       else if(score < 0)
+       {
+            this.scoreToAddText.color = Color.red;
+            this.scoreToAddText.text = "-$" + Mathf.Abs(score);
+       }
        yield return new WaitForSeconds(0.5f);
 
        this.scoreToAddText.gameObject.SetActive(false);

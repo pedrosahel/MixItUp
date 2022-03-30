@@ -34,8 +34,13 @@ public class _Task : MonoBehaviour
 
     private void Update()
     {
-        Timer();
-        MatchTimer();
+        if(GameManager.Instance == null) return;
+
+        if(GameManager.Instance.myState == GameManager.GameState.game)
+        {
+            Timer();
+            MatchTimer();
+        }
     }
 
     private void Timer()
@@ -46,7 +51,7 @@ public class _Task : MonoBehaviour
         {
             if(_TaskManager.Instance != null)
             {
-                _TaskManager.Instance.NextTask();
+                _TaskManager.Instance.TaskFailure();
                 this.timeToNextTask = this.timerHolder;
             }
         }
@@ -58,8 +63,7 @@ public class _Task : MonoBehaviour
 
         if(this.timeMatch <= 0)
         {
-            print("Acabou o Tempo!");
-            //endgame
+            if(GameManager.Instance != null) GameManager.Instance.OnCompleted();
         }
     }
 
@@ -76,5 +80,10 @@ public class _Task : MonoBehaviour
     public float GetTimer()
     {   
         return this.timeToNextTask / this.timerHolder;
+    }
+
+    public float GetMatchTimer()
+    {
+        return this.timeMatch / this.timeMatchHolder;
     }
 }

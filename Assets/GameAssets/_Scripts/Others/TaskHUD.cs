@@ -7,7 +7,11 @@ public class TaskHUD : MonoBehaviour
 
     [SerializeField] private Slider taskTimer;
 
+    [SerializeField] private Slider matchTimer;
+
     [SerializeField] private Image fillImage;
+
+    [SerializeField] private Image fillMatchImage;
 
     [SerializeField] private Image sucessImage;
     [SerializeField] private Image failedImage;
@@ -43,6 +47,7 @@ public class TaskHUD : MonoBehaviour
     private void Update()
     {
         ShowTaskTimer();
+        ShowMatchTimer();
     }
     private void GetTask(string color, string frasco, bool tampa)
     {
@@ -146,6 +151,13 @@ public class TaskHUD : MonoBehaviour
         this.taskTimer.value = mainTask.GetTimer();
 
         this.fillImage.color = this.taskTimer.value > 0.5f ? Color.green : Color.red;
+    }
+
+    private void ShowMatchTimer()
+    {
+        this.matchTimer.value = mainTask.GetMatchTimer();
+
+        this.fillMatchImage.color = this.matchTimer.value > 0.5f ? Color.blue : Color.red;
     }
 
     private void Sucess()

@@ -253,7 +253,6 @@ namespace Main
     private void Delivery()
     {
             canMove = false;
-            if(GameManager.Instance != null) GameManager.Instance.OnDelivery();
             if(SpawnerManager.Instance != null) SpawnerManager.Instance.Spawned(false);
             if(_TaskManager.Instance != null) _TaskManager.Instance.Check(myColor.ToString(), this.gameObject.tag, isClosed);
             if(DeliveryBoxManager.Instance != null) DeliveryBoxManager.Instance.ShowContainer();
