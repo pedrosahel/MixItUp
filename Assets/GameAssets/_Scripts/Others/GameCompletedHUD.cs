@@ -9,8 +9,9 @@ public class GameCompletedHUD : MonoBehaviour
     [SerializeField] private TMP_Text t_desperdicado;
     [SerializeField] private TMP_Text t_completas;
     [SerializeField] private TMP_Text t_falhas;
-
     [SerializeField] private TMP_Text t_totalScore;
+
+    [SerializeField] private Color mainTextColor;
 
     private int recebidos;
     private int desperdicado;
@@ -40,17 +41,13 @@ public class GameCompletedHUD : MonoBehaviour
     }
     private void TextUpdate()
     {
-        float r = 33f;
-        float g = 70f;
-        float b = 255f;
-
         this.t_recebidos.text = "$" + recebidos;
         this.t_desperdicado.text = "- $" + desperdicado;
         this.t_completas.text = completas + "";
         this.t_falhas.text = falhas + "";
         if(totalScore > 0)
         {
-            this.t_totalScore.color = new Color(r, g, b);
+            this.t_totalScore.color = this.mainTextColor;
             this.t_totalScore.text = "$" + totalScore;
         }
         else if(totalScore < 0)

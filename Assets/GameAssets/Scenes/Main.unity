@@ -6401,8 +6401,14 @@ MonoBehaviour:
   easyTask:
   - {fileID: 11400000, guid: 0f60bede33aeab0478d2ba353551f8ba, type: 2}
   - {fileID: 11400000, guid: d44563bef53dcb84b95a832652a644dc, type: 2}
+  - {fileID: 11400000, guid: f3ab4d72607d5ca41973952a0d33961e, type: 2}
+  - {fileID: 11400000, guid: 712f5adb7833fdf42af90d87341b75ff, type: 2}
+  - {fileID: 11400000, guid: 6766d949390a56b448331a41500ebeba, type: 2}
+  - {fileID: 11400000, guid: d0c27763c76f2fd40baff2723739db68, type: 2}
   hardTasks:
   - {fileID: 11400000, guid: ef1e2c554111165498d124d99ed50f5d, type: 2}
+  - {fileID: 11400000, guid: f01d9ad758a619e408d99dd456b8d737, type: 2}
+  - {fileID: 11400000, guid: a5e1db112e8b4d340b755c366c96f8cc, type: 2}
 --- !u!114 &1496752148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8870,6 +8876,7 @@ MonoBehaviour:
   t_completas: {fileID: 1477967993}
   t_falhas: {fileID: 364489239}
   t_totalScore: {fileID: 1967683831}
+  mainTextColor: {r: 0.12941177, g: 0.27450982, b: 0.54901963, a: 1}
 --- !u!1 &2077019883
 GameObject:
   m_ObjectHideFlags: 0
