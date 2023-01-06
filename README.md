@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Imagem do projeto Mix It Up" title="Mix It Up" src="https://imgur.com/a/OmqSqmB"/>
+    <img alt="Imagem do projeto Mix It Up" title="Mix It Up" src="https://github.com/pedrosahel/MixItUp/blob/main/mixitup.png"/>
 </h1>
 
 <p align="center">
